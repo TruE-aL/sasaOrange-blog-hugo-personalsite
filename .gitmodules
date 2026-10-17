@@ -1,0 +1,3 @@
+[submodule "themes/ruri"]
+	path = themes/ruri
+	url = https://github.com/TruE-aL/sasaOrange-blog-hugo.git

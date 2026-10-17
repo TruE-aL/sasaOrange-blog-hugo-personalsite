@@ -1,0 +1,17 @@
+# Hugo 构建产物
+public/
+resources/
+.hugo_build.lock
+
+# 部署用的本地预览缓存
+node_modules/
+.pnpm-store/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 日志
+*.log
