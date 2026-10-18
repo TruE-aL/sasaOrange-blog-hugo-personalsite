@@ -2,7 +2,7 @@
 # 主题本身不保存任何个人设置，这个仓库才是「我的博客」的全部内容。
 
 # 正式网址，末尾必须带 /。改成自定义域名时只改这一行。
-baseURL = "https://sasaorange-blog-hugo.pages.dev/"
+baseURL = "https://sasaorange-blog-hugo-personalsite.pages.dev/"
 # 站点标题。 / Site title.
 title = "sasaOrange"
 # 主题目录名；对应 .gitmodules 里 -> themes/ruri 的 submodule。

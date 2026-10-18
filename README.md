@@ -92,7 +92,7 @@ categories: [Journal]
 
 | 触发 | 结果 |
 | --- | --- |
-| push 到 `main` | 部署生产环境到 `sasaorange-blog-hugo.pages.dev` |
+| push 到 `main` | 部署生产环境到 `sasaorange-blog-hugo-personalsite.pages.dev` |
 | 开 / 更新 PR | 部署预览环境，并在 PR 里回帖预览地址 |
 | 手动触发 | 同 push 到 main |
 

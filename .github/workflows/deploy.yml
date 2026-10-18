@@ -63,7 +63,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public --project-name=sasaorange-blog-hugo --branch=${{ github.head_ref || github.ref_name }}
+          command: pages deploy public --project-name=sasaorange-blog-hugo-personalsite --branch=${{ github.head_ref || github.ref_name }}
 
   # PR 场景下，把预览地址回帖到 PR 评论里，方便直接点开
   comment:
@@ -87,7 +87,7 @@ jobs:
               .toLowerCase()
               .replace(/[^a-z0-9]+/g, '-')
               .replace(/^-|-$/g, '');
-            const url = `https://${slug}.sasaorange-blog-hugo.pages.dev`;
+            const url = `https://${slug}.sasaorange-blog-hugo-personalsite.pages.dev`;
             const body = [
               '### 🚀 预览部署完成',
               '',
