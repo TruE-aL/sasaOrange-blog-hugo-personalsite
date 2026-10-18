@@ -6,6 +6,17 @@
 
 写作只需要动 `content/`；改外观去主题仓库。
 
+## 两个仓库各管什么
+
+| 仓库 | 部署到 | 放什么 |
+| --- | --- | --- |
+| **本仓库** `sasaOrange-blog-hugo-personalsite` | Cloudflare Pages | 你的文章、配置、图片 |
+| `sasaOrange-blog-hugo` | [GitHub Pages](https://true-a-l.github.io/sasaOrange-blog-hugo/) | 主题源码 + 通用示例 `exampleSite` |
+
+两边各跑各的 GitHub Actions，互不干扰：主题仓库只更新演示站，不会动你的博客；你写文章也不会触发主题仓库。
+
+主题更新后，主题仓库的 `bump-site.yml` 会自动把本仓库 `themes/ruri` 的指针推到最新提交，随后本仓库的部署自动重跑。所以正常情况下**你不需要手动升级主题**。
+
 ## 目录
 
 ```
@@ -42,13 +53,21 @@ bash scripts/build.sh
 
 ## 更新主题
 
+一般不用管：主题仓库有提交后，它的 `bump-site.yml` 会自动来改这里的指针。
+
+想手动升到主题最新版：
+
 ```sh
 git submodule update --remote themes/ruri
 git commit -am "chore: 升级主题"
 ```
 
-推上去后 GitHub Actions 会自动重新构建并部署。主题仓库那边也配了工作流，
-主题一更新就会自动来改这里的指针；两边不冲突，谁先到谁生效。
+推上去后 GitHub Actions 自动重新构建部署。想钉回某个提交版本：
+
+```sh
+cd themes/ruri && git checkout <commit-sha> && cd ../..
+git add themes/ruri && git commit -m "chore: 主题回退到 <sha>"
+```
 
 ## 写一篇新文章
 
