@@ -2,7 +2,7 @@
 
 个人博客的站点仓库：文章、配置和部署都在这里。页面本身由
 [sasaOrange-blog-hugo](https://github.com/TruE-aL/sasaOrange-blog-hugo) 这个主题渲染，
-主题以 submodule 挂在 `themes/ruri`。
+主题以 submodule 挂在 `themes/sasaOrange`。
 
 写作只需要动 `content/`；改外观去主题仓库。
 
@@ -15,7 +15,7 @@
 
 两边各跑各的 GitHub Actions，互不干扰：主题仓库只更新演示站，不会动你的博客；你写文章也不会触发主题仓库。
 
-主题更新后，主题仓库的 `bump-site.yml` 会自动把本仓库 `themes/ruri` 的指针推到最新提交，随后本仓库的部署自动重跑。所以正常情况下**你不需要手动升级主题**。
+主题更新后，主题仓库的 `bump-site.yml` 会自动把本仓库 `themes/sasaOrange` 的指针推到最新提交，随后本仓库的部署自动重跑。所以正常情况下**你不需要手动升级主题**。
 
 ## 目录
 
@@ -38,7 +38,7 @@ scripts/build.sh 构建：hugo -> pagefind
 git clone --recursive https://github.com/TruE-aL/sasaOrange-blog-hugo-personalsite.git
 cd sasaOrange-blog-hugo-personalsite
 
-# 已经克隆过、但 themes/ruri 是空的：
+# 已经克隆过、但 themes/sasaOrange 是空的：
 git submodule update --init --recursive
 
 # 预览（Hugo 自带服务器，热更新）
@@ -58,15 +58,15 @@ bash scripts/build.sh
 想手动升到主题最新版：
 
 ```sh
-git submodule update --remote themes/ruri
+git submodule update --remote themes/sasaOrange
 git commit -am "chore: 升级主题"
 ```
 
 推上去后 GitHub Actions 自动重新构建部署。想钉回某个提交版本：
 
 ```sh
-cd themes/ruri && git checkout <commit-sha> && cd ../..
-git add themes/ruri && git commit -m "chore: 主题回退到 <sha>"
+cd themes/sasaOrange && git checkout <commit-sha> && cd ../..
+git add themes/sasaOrange && git commit -m "chore: 主题回退到 <sha>"
 ```
 
 ## 写一篇新文章

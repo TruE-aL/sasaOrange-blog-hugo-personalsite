@@ -14,8 +14,8 @@ cd "$(dirname "$0")/.."
 HUGO="${HUGO_BIN:-hugo}"
 PAGEFIND_VERSION="1.4.0"
 
-if [ ! -d themes/ruri ]; then
-  echo "✗ themes/ruri 不存在。先运行：git submodule update --init --recursive" >&2
+if [ ! -d themes/sasaOrange ]; then
+  echo "✗ themes/sasaOrange 不存在。先运行：git submodule update --init --recursive" >&2
   exit 1
 fi
 

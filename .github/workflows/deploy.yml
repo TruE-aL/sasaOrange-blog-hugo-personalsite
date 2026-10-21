@@ -37,7 +37,7 @@ jobs:
         with:
           # 拉全量历史：feed/sitemap 里的时间来自 git log，浅克隆拿不到真实提交时间。
           fetch-depth: 0
-          # 站点里 themes/ruri 是主题 submodule，必须一并拉下来。
+          # 站点里 themes/sasaOrange 是主题 submodule，必须一并拉下来。
           submodules: recursive
 
       - name: Setup Hugo

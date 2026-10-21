@@ -1,12 +1,12 @@
-# 个人站点配置：主题从 sasaOrange-blog-hugo 以 submodule 的方式挂在 themes/ruri。
+# 个人站点配置：主题从 sasaOrange-blog-hugo 以 submodule 的方式挂在 themes/sasaOrange。
 # 主题本身不保存任何个人设置，这个仓库才是「我的博客」的全部内容。
 
 # 正式网址，末尾必须带 /。改成自定义域名时只改这一行。
 baseURL = "https://sasaorange-blog-hugo-personalsite.pages.dev/"
 # 站点标题。 / Site title.
 title = "sasaOrange"
-# 主题目录名；对应 .gitmodules 里 -> themes/ruri 的 submodule。
-theme = "ruri"
+# 主题目录名；对应 .gitmodules 里 -> themes/sasaOrange 的 submodule。
+theme = "sasaOrange"
 # 默认语言。站点以简体中文为主。
 defaultContentLanguage = "zh-cn"
 # 使用语言子目录：/zh-cn/、/en/ 等。关掉会改变所有 URL 并影响已有链接。
